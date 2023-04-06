@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Compound interest</title>
+
+    <style>
+        .colourtext{color: green;}
+    </style>
+</head>
+
+<body>
+    <h1>
+        Compound interest
+        <br>
+        <img src="picture.jpg" width="200" height="100" alt="money">
+    </h1>
+
+    <script>
+        function compoundCalc()
+        {
+            var p = document.compoundForm.amount.value;
+            var t = document.compoundForm.years.value;
+            var i = document.compoundForm.interest.value;
+            var m = document.compoundForm.nuoftime.value;
+            var a = (p*(1+i/m)**(m*t)).toFixed(2);
+
+            console.log(a);
+
+            document.compoundForm.result.value = a; 
+
+            if (p == "" || t == "" || i == "" || m == "")
+            {
+                alert("please enter numbers!!!");
+                return;
+            }
+
+            if (isNan(a))
+            {
+                alert("Please enter numbers!!!:");
+                return;
+            }
+
+        }
+
+        function clearInput()
+        {
+            document.compoundForm.reset();
+        }
+    </script>
+
+    <form name="compoundForm">
+        <label for="amount" style="margin: 10px;">Enter the amount: </label>
+        <input type="text" name="amount" style="margin: 10px;">
+        <br>
+        <label for="years" style="margin: 10px;">Enter number of years: </label>
+        <input type="text" name="years" style="margin: 10px;">
+        <br>
+        <label for="interest" style="margin: 10px;">Enter the interest: </label>
+        <input type="text" name="interest" style="margin: 10px;">
+        <br>
+        <label for="nuoftime" style="margin: 10px;">Enter number of times: </label>
+        <input type="text" name="nuoftime" style="margin: 10px;">
+
+        <p>Click the button to calculate compound interest</p>
+        <input type="button" value="Click me" onclick="compoundCalc();">
+        <br>
+
+        <label for="result" style="margin:10px;">The result is: </label>
+        <input type="text" name="result" style="margin:10px;">
+
+        <p>Click the button to reset all fields</p>
+        <input type= "button" onclick="clearInput();" value="Clear form">
+        <br>
+
+
+    </form>
+
+</body>
+</html>

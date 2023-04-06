@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/dist/paper-full.min.js"></script>
+
+</head>
+<body>
+    <canvas id="mycanvas" style="border: solid 1px black; width: 800px; height: 600px;">
+
+    </canvas>
+
+    <script>
+        paper.install(window);
+
+        window.onload = function()
+        {
+            paper.setup("mycanvas");
+
+
+            /*
+            var p = new Point(400,300);
+            var s = new Size(300,100);
+
+            var r = Shape.Rectangle(p,s);
+            r.strokeColor= "black";
+
+            var p2 = new Point(200, 400);
+            var c = Shape.Circle(p2, 75);
+            c.strokeColor = "pink";
+            */arguments
+
+            var t = new Tool();
+            t.onMouseDown = function(event)
+            {
+                /*var c = Shape.Circle(event.point.x, event.point.y, 20);
+                c.fillColor = "pink";
+                */arguments
+
+                path = new Path();
+                path.strokeColor = "black";
+                path.strokeWidth = 10;
+                path.add(event.point);
+            }
+            
+            t.onMouseDrag = function(event)
+            {
+                /*var c = Shape.Circle(event.point.x, event.point.y, 20);
+                c.fillColor = "pink"; 
+                */arguments
+
+                path.add(event.point);
+            }
+
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>

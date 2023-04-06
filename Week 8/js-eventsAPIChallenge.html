@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p
+        {
+            width: 500px;
+            height: 400px;
+            margin: 20px;
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>
+        Events Challenge
+    </h1>
+    <hr>
+
+    <p id="Click_for_kitten">Click for kitten</p>
+
+    <img id="myimg">
+
+    <script>
+
+        async function on_click()
+        {
+            console.log(`click x: ${event.offsetX},${event.offsetY}`);
+
+            var x = event.offsetX
+            var y = event.offsetY
+            
+
+            var u = new URL(`http://placekitten.com/${x}/${y}`);
+            var res = await fetch(u);
+
+            var kblob = await res.blob();
+            var kimg = URL.createObjectURL(kblob);
+
+            document.getElementById("myimg").src = kimg;
+        
+        }
+
+        document.getElementById("Click_for_kitten").addEventListener("click", on_click);
+
+        
+    </script>
+    
+</body>
+</html>

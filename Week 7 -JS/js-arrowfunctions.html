@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<h1>
+    Arrow function
+</h1>
+<body>
+    <script>
+        //old style function
+        function addTwo(x, y)
+        {
+            var z = x + y;
+            return z;
+        }
+
+        //new style ES6 function
+        let arrowisedAddTwo = (x, y) => x + y;
+
+
+        //old style
+        function squared(x)
+        {
+            return x * x;
+        }
+
+        //new style
+        let arrowised_squared = x => x * x;
+
+
+        document.write(addTwo(5,7));
+        document.write("<br>");
+        document.write(arrowisedAddTwo(5,7));
+        document.write("<br>");
+        document.write(squared(7));
+        document.write("<br>");
+        document.write(arrowised_squared(7));        
+    </script>
+
+</body>
+</html>

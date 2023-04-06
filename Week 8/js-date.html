@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date examples</title>
+</head>
+<body>
+    <h1>
+        Date examples
+    </h1>
+    <hr>
+
+    <form name="form1">
+        <input type="date" id="mydate">
+        <input type="button" value="Click me" onclick="checkdate();">
+
+    </form>
+    <script>
+        function checkdate()
+        {
+            var s = document.form1.mydate.value;
+            console.log(s);
+            var d = new Date(s);
+            var todaysDate = new Date();
+            console.log(d);
+            console.log(todaysDate);
+
+            var n = d.getDay(n);
+            
+            days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            var p = document.createElement("p");
+            
+            if (d == todaysDate(d))
+            {
+                var t = document.createTextNode(`${s} is a ${days[n]}`);
+                p.appendChild(t);
+                document.getElementById("outputs").appendChild(p);
+            }
+            else if (d > todaysDate)
+            {
+                var t = document.createTextNode(`${s} will be a  ${days[n]}`);
+                p.appendChild(t);
+                document.getElementById("outputs").appendChild(p);
+            }
+            else
+            {
+                var t = document.createTextNode(`${s} was a  ${days[n]}`);
+                p.appendChild(t);
+                document.getElementById("outputs").appendChild(p);
+            }
+           
+            
+            //var t = document.createTextNode(`${s} is a ${days[n]}`);
+            //p.appendChild(t);
+            //document.getElementById("outputs").appendChild(p);
+
+        }
+    </script>
+    <hr>
+
+    <div id="outputs"></div>
+
+</body>
+</html>

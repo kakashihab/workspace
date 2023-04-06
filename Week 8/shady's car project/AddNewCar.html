@@ -1,0 +1,77 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding car</title>
+  </head>
+  <h1>
+    Adding a new car
+  </h1>
+  <hr size="10">
+  
+  <body>
+    <script>
+      function addCars()
+        {
+          var make = document.addCar.make.value;
+          var model = document.addCar.model.value;
+          var colour = document.addCar.coloue.value;
+          var year = document.addCar.year.value;
+          var plate = document.addCar.plate.value;
+          var location = document.addCar.location.value;
+          var pfrom = document.addCar.purchasedfrom.value;
+          var pprice = document.addCar.purchaseprice.value;
+          
+          var sprice = pprice*1.50;
+          
+          document.addCar.sellingprice.value = sprice;
+        }
+      
+  
+  
+  
+    </script>
+  
+  
+    <form name="addCar">
+      <label for="make" style="margin: 10px;">Make </label>
+      <input type="text" name="make" style="margin: 10px;">
+      <br>
+      <label for="model" style="margin: 10px;">Model </label>
+      <input type="text" name="model" style="margin: 10px;">
+      <br>
+      <label for="colour" style="margin: 10px;">Colour </label>
+      <input type="text" name="colour" style="margin: 10px;">
+      <br>
+      <label for="year" style="margin: 10px;">Year </label>
+      <input type="text" name="year" style="margin: 10px;">
+      <br>
+      <label for="plate" style="margin: 10px;">License Plate </label>
+      <input type="text" name="plate" style="margin: 10px;">
+      <br>
+      <label for="location" style="margin: 10px;">Location </label>
+      <input type="text" name="location" style="margin: 10px;">
+      <br>
+      <label for="purchasedfrom" style="margin: 10px;">Purchased from </label>
+      <input type="text" name="purchasedfrom" style="margin: 10px;">
+      <br>
+      <label for="purchaseprice" style="margin: 10px;">Purchase price </label>
+      <input type="text" name="purchaseprice" style="margin: 10px;">
+      <br>
+      <input type="button" value="Generate price" onclick="addCars();">
+      <br>
+      <label for="sellingprice" style="margin: 10px;">Selling price </label>
+      <input type="text" name="sellingprice" style="margin: 10px;">
+      <br>
+
+
+
+      
+  
+  
+  
+     
+    </form>
+  </body>
+  
+  </html>

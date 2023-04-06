@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Interval Challenge </h1>
+    <hr>
+    
+    <img id="img" img="myimg" src="bmw1.jpg" style="height: 300px; width: 500px;">
+    <br>
+    <input type="button" id="resumeinterval" value="Resume">
+    <input type="button" id="stopinterval" value="Stop"> 
+    <script>
+
+    var mycars = ["bmw1.jpg", "bmw2.jpg", "bmw3.jpg", "bmw4.jpg", "bmw5.png", "bmw6.jpg"]
+    var i = 0;
+    var p = 0;
+
+    document.getElementById("stopinterval").addEventListener("click", stopinterval);
+    document.getElementById("resumeinterval").addEventListener("click", resumeinterval);
+        
+
+       
+        function stopinterval()
+        {
+            clearInterval(myInterval);
+        }        
+                     
+    
+        function resumeinterval()
+        {
+            myInterval = setInterval(on_interval, 1000);
+        }
+        
+
+        function on_interval()
+        {
+            document.getElementById("img").src = mycars[i];
+            i ++;
+            
+            if (i >= mycars.length)
+            {
+                i = 0;
+            }
+        }
+        var myInterval = setInterval(on_interval, 1000);
+    </script>
+
+    
+</body>
+</html>

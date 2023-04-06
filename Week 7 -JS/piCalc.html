@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi</title>
+
+    <script src="js/dist/paper-full.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico.png">
+
+    
+</head>
+<body>
+
+    
+    <h1> Pi calculator </h1>
+    <script>
+
+        
+
+        function circle()
+        {
+            var r = document.piForm.rad.value;
+            var area = (Math.PI*r**2);
+            var circ = (Math.PI*2*r);
+
+            document.piForm.a.value = area.toFixed(2); 
+            document.piForm.c.value = circ.toFixed(2); 
+
+        }
+
+        paper.install(window);
+        function createCircle()
+        {
+            paper.setup("mycanvas");
+            var p2 = new Point(250, 150);
+            var rad = document.piForm.rad.value;
+            if (rad < 151)
+            {
+                var circle = Shape.Circle(p2, rad);
+            }
+            else
+            {
+                alert("What are you thinking?!")
+            }
+            
+            circle.strokeColor = "red"
+            circle.fillColor = "red"
+
+            var t = new PointText(250,50)
+            t.fontSize = 20;
+            t.justification = "center";
+            t.fillColor = "black";
+            t.content = "Bangladesh";
+
+            var from = new Point(p2);
+            var to = new Point(250+rad);
+            var path = new Path.Line(from, to);
+            path.strokeWidth = 1;
+            path.strokeColor = "black";
+        }
+
+    </script>
+
+    <form name="piForm">
+        <label for="rad" style="margin: 1px;">Enter the radius: </label>
+        <input type="text" name="rad" style="margin: 10px;">
+        <br>
+
+        
+        
+        <br>
+        
+        <p>Click the button to calculate area and circumference</p>
+        <input type="button" value="Click me" onclick="circle();">
+        
+        <input type="button" value="Draw circle" onclick="createCircle();">
+        <br>
+        <label for="a" style="margin:10px;">The Area is: </label>
+        <input type="text" name="a" style="margin:10px;">
+
+        <label for="c" style="margin:10px;">The Circumference is: </label>
+        <input type="text" name="c" style="margin:10px;">
+
+       
+
+    </form>
+
+    <h2> Your circle looks like</h2>
+    <canvas id="mycanvas" style="background-color: green; margin-left: 50px; border: solid 1px black; width: 500px; height: 300px;">
+
+    </canvas>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+<body>
+    <h1> 
+        Shopping List
+    </h1>
+    <div id="shoppingList">
+
+    </div>
+
+    <script>
+        function addItem()
+        {
+            
+            var newItem = document.createElement("div");
+            newItem.innerHTML = document.SList.AddItems.value;
+            document.getElementById("shoppingList").appendChild(newItem);
+            document.SList.AddItems.value= "";
+        }
+        function clearList()
+        {
+            while (document.getElementById("shoppingList").firstChild)
+            {
+                document.getElementById("shoppingList").removeChild(document.getElementById("shoppingList").firstChild);
+            }
+            //document.getElementById("shoppingList").removeChild(document.getElementById("shoppingList").firstChild);
+            //document.removeChild(newItem);
+            
+        }
+
+    </script>
+
+    <form name="SList">
+        <label for="AddItems" style="margin: 10px;">Enter Item</label>
+        <input type="text" name="AddItems" style="margin: 10px;">
+        <input type="button" value="add" onclick="addItem();">
+
+        <input type="button" value="clear list" onclick="clearList();">
+
+       
+    </form>
+
+    
+    
+</body>
+</html>

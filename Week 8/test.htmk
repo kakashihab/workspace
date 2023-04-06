@@ -1,0 +1,18 @@
+<form name="ninja">
+        <label for="firstname" style="margin: 10px;">Enter your first name: </label>
+        <input type="text" name="firstname" style="margin: 10px;">
+        <br>
+        <label for="surname" style="margin: 10px;">Enter your surname: </label>
+        <input type="text" name="surname" style="margin: 10px;">
+        <br>
+        <label for="village" style="margin: 10px;">Enter the village you want to be registered to: </label>
+        <input type="text" name="village" style="margin: 10px;">
+        <br>
+        <label for="nickname" style="margin: 10px;">What would you like your nickname to be? </label>
+        <input type="text" name="nickname" style="margin: 10px;">
+    
+        <p>Click the button to get your ninja pass</p>
+        <input type="button" value="Click me" onclick="ninjaAdlib();">
+        <br>
+    
+    </form>

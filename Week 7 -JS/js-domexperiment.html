@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-DOM</title>
+</head>
+<body>
+    <h1>
+        Modifying the DOM
+    </h1>
+    <hr>
+
+    <div id="mydiv" style="border: 1px;">
+        
+
+    </div>
+    <script>
+        //Details about the current document
+        /*
+        document.write(document.domain);
+        document.write("<br>");
+        document.write(document.URL);
+        document.write("<br>");
+        document.write(document.title);
+        document.write("<br>");
+        */
+        
+        //add some items to the DOM
+        /*
+        var p1 = document.createElement("p");
+        var s = document.createTextNode("Hello World");
+        p1.appendChild(s);
+        document.getElementById("mydiv").appendChild(p1);
+
+        var p2 = document.createElement("p");
+        var s = document.createTextNode("Hello Universe");
+        p2.appendChild(s);
+        document.getElementById("mydiv").appendChild(p2);
+        */
+
+        function addDomItem()
+        {
+            /*
+            var newElement = document.createElement("p");
+            var s = document.createTextNode("Hello World");
+            newElement.appendChild(s);
+            document.getElementById("mydiv").appendChild(newElement);
+            */
+
+            var newElement = document.createElement("div");
+            newElement.innerHTML = "Hello World";
+            document.getElementById("mydiv").appendChild(newElement);
+        }
+
+        
+
+
+    </script>
+    <hr>
+
+    <input type="button" value="click me" onclick="addDomItem()">
+
+    
+</body>
+</html>

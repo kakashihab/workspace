@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let and Var diff</title>
+</head>
+
+<body>
+    <h1>
+        Let and Var
+    </h1>
+    <hr>
+    <script> 
+
+    function addTwoNum(x, y)
+    {
+        var z = x + y;
+        document.write(z);
+        document.write("<hr>");
+
+        for (var i=0; i<z; i++)
+        {
+            let n = i +5;
+            document.write(n);
+            document.write("<br>");
+        }
+        document.write("<hr>");
+        document.write(`the final value is ${n}`); //this will not print as n is a 'let' not a 'var'
+    }
+
+    document.write(addTwoNum(5, 7));
+    </script>
+
+    
+
+</body>
+
+</html>

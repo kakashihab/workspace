@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Async Await
+    </h1>
+    <script>
+        async function do_fetch()
+        {
+            var n = document.form1.itemtoget.value;
+
+            if (n == "")
+            {
+                var res = await fetch(`https://jsonplaceholder.typicode.com/todos/`);
+                var j = await res.json();
+                while(j["id"] != "")
+                {
+                    document.write(`${j[i]["id"]}....${j[i]["title"]}`);
+                    document.write("<br>");
+                    i++;
+                }
+            }
+            else
+            {
+                var res = await fetch(`https://jsonplaceholder.typicode.com/todos/${n}`);
+                var j = await res.json();
+                document.write(`${j["id"]}....${j["title"]}`);
+            }
+               
+        }
+
+
+    </script>
+    <form name="form1">
+    <label for="itemtoget">Enter item to get</label>
+    <input type="text" id="itemtoget">
+    
+    <input type="button" value="click me" onclick="do_fetch();">
+    
+
+    </form>
+
+</body>
+</html>

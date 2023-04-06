@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Arrays
+    </h1>
+    <hr>
+
+    <script>
+        // arrays
+        /*
+        var names = ["Alice", "Bob", "Jeff", "Jim", "Julie", "Jane"];
+
+        var colours = [];
+        colours.push("Pink");
+        colours.push("Green");
+
+        var s = colours.pop();
+        document.write(s);
+        document.write("<br>");
+
+        for (var i = 0; i < colours.length; i++)
+        {
+            document.write(`${i} : ${colours[i]}`);
+            document.write("<br>");
+        }
+        */
+
+        // array objects (basically dictionaries)
+        
+        var alice = {name: "Alice",
+                     address: "1 High Street",
+                     id: 123435};
+
+        var bob = {name: "Bob",
+                   address: "2 Main Street", 
+                   id: 45353453};
+
+        /*
+        document.write(alice["address"]);
+        document.write("<br>");
+        document.write(bob["id"]);
+        */
+
+        // possible to mix up types of data in a JS array
+        // var mixed = [1, 2, "three", 4.0];
+
+        // create an array of arrays
+        var people = [alice, bob];
+        document.write(people[1]["address"]);   // Bob's address
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <hr>
+</body>
+</html>

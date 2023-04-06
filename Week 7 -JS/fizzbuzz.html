@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizzbuzz</title>
+</head>
+<body>
+    <h1>
+        Fizzbuzz
+    </h1>
+    <script>
+        var fizz = "fizz"
+        var buzz = "buzz"
+
+        //prints fizz
+        
+        //<table>
+        for (var fizzbuzz = 1; fizzbuzz <101; fizzbuzz++)
+        {
+            if ((fizzbuzz % 3 == 0) && (fizzbuzz % 5 == 0))
+            {
+                document.write(`${fizz} ${buzz}`);
+                document.write("<br>");
+                //document.write(`<tr><td>${fizzbuzz}</td><td>fizzbuzz</td></tr>`);
+            }
+            
+            else if (fizzbuzz % 3 == 0)
+            {
+                document.write(fizz);
+                document.write("<br>");
+            }
+
+            else if (fizzbuzz % 5 == 0)
+            {
+                document.write(buzz);
+                document.write("<br>");
+            }
+
+            else
+            {
+                document.write(fizzbuzz);
+                document.write("<br>");
+            }
+        }
+
+    </script>
+
+</body>
+</html>

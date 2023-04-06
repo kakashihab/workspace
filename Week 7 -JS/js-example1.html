@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .colourfultext{color: blue}
+    </style>
+
+</head>
+<body>
+    <h1>
+        My web page
+    </h1>
+    
+    <hr>
+    
+    <script>
+        //Some js examples
+        var x = Number(prompt("Enter a number"));
+        var y = Number(prompt("Enter another number"));
+        
+        //adding
+        document.write("<p class=\"colourfultext\">");
+            var z = x + y;
+            document.write(`Added together : ${z}`);
+        document.write("</p>");
+
+        //subtract
+        document.write("<p class=\"colourfultext\">");
+            var z = x - y;
+            document.write(`Subtracted together : ${z}`);
+        document.write("</p>");
+
+        //Multiply
+        document.write("<p class=\"colourfultext\">");
+            var z = x * y;
+            document.write(`Multiply together : ${z}`);
+        document.write("</p>");
+
+        //Divided
+        document.write("<p class=\"colourfultext\">");
+            var z = x / y;
+            document.write(`Divided together : ${z.toFixed(2)}`);
+        document.write("</p>");
+
+        //Power
+        document.write("<p class=\"colourfultext\">");
+            var z = x ** y;
+            document.write(`Raised to a power : ${z}`);
+        document.write("</p>");
+
+    
+    
+    </script>
+    
+    <hr>
+    
+</body>
+</html>
