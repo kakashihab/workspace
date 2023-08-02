@@ -1,6 +1,6 @@
 #Task 1: Write a program that requests the user to enter a word or phrase Display the string as it was entered then in uppercase then in lowercase then display the length of the string : The string has 10 characters then display the string with spaces
 print("Starting Task 1")
-car_brand = input("Type a brand of a car: ")
+car_brand = input("Type a make of a car: ")
 print(car_brand)
 print(car_brand.upper())
 print(car_brand.lower())
